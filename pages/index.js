@@ -2,7 +2,7 @@ import HomeStyle from "../homepage.scss";
 
 class Home extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       search: ""
@@ -12,21 +12,21 @@ class Home extends React.Component {
   }
 
   //this function keeps track of the input entered by users.
-  updateQuery(e){
-    this.setState({search: e.currentTarget.value})
+  updateQuery(e) {
+    this.setState({ search: e.currentTarget.value })
   }
 
   // this function redirects users to the search results page based on the query.
   handleClick = (e) => {
     e.preventDefault();
-    if (this.state.search != ""){
-      window.location.href=`/results?searchQuery=${this.state.search}`
+    if (this.state.search != "") {
+      window.location.href = `/results?searchQuery=${this.state.search}`
     }
   }
 
   //Renders the search bar in the home page. 
-  render(){
-    return(
+  render() {
+    return (
       <div className="home-container">
         <style jsx>{HomeStyle}</style>
         <div className="home-navbar">
@@ -44,28 +44,28 @@ class Home extends React.Component {
           </a>
         </div>
         <div className="home-center-container">
-            <p className="company-title">
-              <span className="company-letter">G</span>
-              <span className="company-letter">o</span>
-              <span className="company-letter">o</span>
-              <span className="company-letter">g</span>
-              <span className="company-letter">l</span>
-              <span className="company-letter">e</span>
-            </p>
-            <div className="form-container">
-              <form id="form" autoComplete="off">
-                <div className="form-input">
-                  <i className="fas fa-search"></i>
-                  <div>
-                    <input type="text" id="search-bar" className="form-control" onChange={this.updateQuery} value={this.state.search} ></input>
-                  </div>
+          <p className="company-title">
+            <span className="company-letter">G</span>
+            <span className="company-letter">o</span>
+            <span className="company-letter">o</span>
+            <span className="company-letter">g</span>
+            <span className="company-letter">l</span>
+            <span className="company-letter">e</span>
+          </p>
+          <div className="form-container">
+            <form id="form" autoComplete="off">
+              <div className="form-input">
+                <i className="fas fa-search"></i>
+                <div>
+                  <input type="text" id="search-bar" className="form-control" onChange={this.updateQuery} value={this.state.search} ></input>
                 </div>
-                <div className="form-button">
-                  <button className="search-button" onClick={this.handleClick} id="searchButton">Google Search</button>
-                </div>
-              </form>
-            </div>
-            <div className="developer-info">Developed by Cindy Kuo</div>
+              </div>
+              <div className="form-button">
+                <button className="search-button" onClick={this.handleClick} id="searchButton">Google Search</button>
+              </div>
+            </form>
+          </div>
+          <div className="developer-info">Developed by Cindy Kuo</div>
         </div>
       </div>
     )

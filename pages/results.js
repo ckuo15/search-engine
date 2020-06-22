@@ -170,7 +170,7 @@ class Results extends React.Component{
         <style jsx>{ResultsStyle}</style>
         <div className="results-navbar">
           <div className="rv-left">
-              <Link href="/homepage">
+              <Link href="/index">
                 <img src="../static/images/google-logo.png" className="results-company-logo"></img>
               </Link>
               <div className="results-form-container">
