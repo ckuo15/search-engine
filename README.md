@@ -5,7 +5,7 @@
 
 #### Custom built Google search engine using external API
 
-#### Technologies used: NextJS, SASS
+#### Technologies used: NextJS, SASS, React-Player
 
 #### Features: 
 
