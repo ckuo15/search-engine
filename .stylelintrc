@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-wild",
+  "rules": {
+    "max-nesting-depth": null,
+    "selector-max-id": null,
+    "max-empty-lines": null,
+    "no-descending-specificity": null
+  }
+}

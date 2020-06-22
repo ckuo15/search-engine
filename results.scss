@@ -1,0 +1,335 @@
+// Styling for navbar
+
+.results-navbar {
+  display: flex;
+  padding-top: 30px;
+  padding-left: 28px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #F3F3F4;
+  justify-content: space-between;
+
+}
+
+.rv-left {
+  display: flex;
+}
+
+.rv-right {
+  padding-left: 20px;
+  display: flex;
+  align-items: space-between;
+  margin-right: 20px;
+}
+
+.user-icon {
+  height: 39px;
+  width: 55px;
+  padding-right: 10px;
+  margin-top: 3px;
+}
+
+.results-company-logo {
+  width: 90px;
+  height: 30px;
+  cursor: pointer;
+  margin-right: 50px;
+}
+
+//Styling for dropdown menu
+
+.results-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#r-drop-icon {
+  margin-top: 12px;
+}
+
+.r-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 17px;
+  background-color: #f3f1f1;
+  min-width: 150px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-height: 150px;
+  border-radius: 10px;
+}
+
+.r-dropdown-content a {
+  text-decoration: none;
+  display: block;
+  font-size: 30px;
+}
+
+
+.results-dropdown:hover .r-dropdown-content {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.r-dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.fa-linkedin {
+  margin-left: 10px;
+
+}
+
+.fa-folder-open {
+  color: #FBBC03;
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.fa-github {
+  color: #EA4235;
+  margin-left: 10px;
+
+}
+
+.fa-angellist {
+  color: #33A853;
+  margin-left: 10px;
+
+}
+
+.r-dropdown-content span {
+  font-size: 14px;
+  margin-left: 20px;
+  color: #737373;
+}
+
+.home-user-icon {
+  height: 60px;
+  width: 78px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+
+.fa-th {
+  margin-right: 20px;
+  margin-top: 30px;
+  font-size: 22px;
+  color: #676767;
+}
+
+//Styling for search form
+
+.results-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.results-form-input {
+  position: relative;
+}
+
+.results-search-button {
+  border: none;
+  outline: none;
+}
+
+#results-search-bar {
+  width: 700px;
+  border-radius: 30px;
+  outline: none;
+  height: 45px;
+  border: 1px solid #EEE;
+  padding-left: 20px;
+  padding-right: 50px;
+}
+
+#results-search-bar:hover {
+  box-shadow: 1px 1px 1px 1px rgb(224, 223, 223);
+}
+
+#results-fa-search {
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  color: #4185F4;
+  cursor: pointer;
+}
+//Styling for navbar category tabs
+
+.navbar-tabs {
+  margin-top: 20px;
+}
+
+.navbar-tab-all {
+  color: #1973E7;
+  border-bottom: 3px solid #1973E7;
+  font-size: 14px;
+  width: 30px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+//Styling for no results page.
+
+.no-results {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 180px;
+  margin-top: 50px;
+}
+
+.noresult-query-display {
+  font-weight: bold;
+}
+//Styling for results section.
+
+.results {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 180px;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.result-about {
+  color: #4D5156;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.result-displayed-url {
+  color: #5F6368;
+  font-size: 15px;
+}
+
+.result-title {
+  font-size: 20px;
+  color: #190DAB;
+}
+
+.result-snippet {
+  color: #5F6368;
+  font-size: 15px;
+}
+//Styling for related searches section.
+
+.related-searches-header {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.related-searches {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  margin-bottom: 5px;
+}
+
+.related-searches-container {
+  column-count: 2;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.related-searches-items {
+  color: #190DAB;
+}
+//Styling for the loading page.
+
+.loading-container {
+  background-color: #FFF1CE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-image {
+  object-fit: cover;
+  height: 300px;
+  width: 130px;
+}
+//Styling for more results pages.
+
+.results-pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-result-page {
+  margin-right: 15px;
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.results-page {
+  margin-right: 15px;
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.results-page-numbers {
+  display: flex;
+  justify-content: center;
+}
+
+.results-page-next {
+  margin-left: 20px;
+}
+
+.results-page-company-logo {
+  width: 120px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+//Styling for videos related to search
+
+.results-video-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.results-videos-header {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.results-video {
+  border: 1px solid #E0E1E5;
+  width: 300px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.result-video-title {
+  color: #190DAB;
+}
+
+.video-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 188px;
+}
+
+.video-info p {
+  margin: 0;
+
+}

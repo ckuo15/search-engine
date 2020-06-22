@@ -1,0 +1,203 @@
+// .home-container{
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.home-center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 130px;
+}
+
+//Styling for the navbar
+
+.home-navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+
+}
+
+.home-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 17px;
+  background-color: #f3f1f1;
+  min-width: 150px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-height: 150px;
+  border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.home-dropdown:hover .dropdown-content {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  display: block;
+  font-size: 30px;
+}
+
+.fa-linkedin {
+  margin-left: 10px;
+
+}
+
+.fa-folder-open {
+  color: #FBBC03;
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.fa-github {
+  color: #EA4235;
+  margin-left: 10px;
+
+}
+
+.fa-angellist {
+  color: #33A853;
+  margin-left: 10px;
+
+}
+
+.dropdown-content span {
+  font-size: 15px;
+  margin-left: 20px;
+  color: #737373;
+}
+
+.home-user-icon {
+  height: 60px;
+  width: 85px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+
+.fa-th {
+  margin-right: 20px;
+  margin-top: 30px;
+  font-size: 22px;
+  color: #676767;
+}
+
+//stylings for company logo
+
+.company-title {
+  margin-bottom: 50px;
+}
+
+.company-letter {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.company-letter:nth-child(1) {
+  color: #4185F4;
+  font-size: 90px;
+}
+
+.company-letter:nth-child(2) {
+  color: #EA4235;
+  font-size: 90px;
+}
+
+.company-letter:nth-child(3) {
+  color: #FBBC03;
+  font-size: 90px;
+}
+
+.company-letter:nth-child(4) {
+  color: #4185F4;
+  font-size: 90px;
+}
+
+.company-letter:nth-child(5) {
+  color: #33A853;
+  font-size: 90px;
+}
+
+.company-letter:nth-child(6) {
+  color: #EA4235;
+  font-size: 90px;
+}
+
+//styling for the search bar
+
+.form-container {
+  display: flex;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-input {
+  position: relative;
+}
+
+.form-button {
+  margin-top: 30px;
+}
+
+#search-bar {
+  border-radius: 30px;
+  width: 550px;
+  height: 40px;
+  padding-left: 45px;
+}
+
+#search-bar:hover {
+  box-shadow: 2px 2px 2px 2px rgb(224, 223, 223);
+}
+
+.search-button {
+  border: 1px solid #F5F5F5;
+  background-color: #F5F5F5;
+  color: #5F6368;
+  padding: 5px;
+  border-radius: 5px;
+  width: 135px;
+}
+
+.search-button:hover {
+  color: black;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.search-button:focus {
+  outline: none;
+}
+
+.fa-search {
+  position: absolute;
+  left: 20px;
+  bottom: 12px;
+  color: #9AA0A6;
+}
+
+//Styling for developer's info
+
+.developer-info {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #190DAB;
+  cursor: default;
+}
+
