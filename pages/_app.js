@@ -1,7 +1,7 @@
 // Core
 import App, { Container } from "next/app";
 
-class TonebaseApp extends App {
+class SearchApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
@@ -23,4 +23,4 @@ class TonebaseApp extends App {
   }
 }
 
-export default TonebaseApp;
+export default SearchApp;
