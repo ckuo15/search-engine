@@ -43,6 +43,7 @@ class MyDocument extends Document {
             content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
             name="viewport"
           />
+
           <link rel="shortcut icon" type="image/png" href="../static/images/tab-logo.png"/>
 
           {
@@ -58,7 +59,7 @@ class MyDocument extends Document {
           }
           <script dangerouslySetInnerHTML={{ __html: envScript }} />
           <script src="home.js"></script>
-          <script src="https://kit.fontawesome.com/f391d4e959.js" crossorigin="anonymous"></script>
+          <script src="https://kit.fontawesome.com/f391d4e959.js" crossOrigin="anonymous"></script>
         </Head>
         <body>
           <Main />
