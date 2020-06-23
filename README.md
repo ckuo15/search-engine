@@ -1,7 +1,6 @@
 ## Google Search Engine
 
-### [Live Link](https://search-enginne.herokuapp.com/)
-
+#### To run on local machine, please run npm install, npm run dev, and then navigate to http://localhost:3000/#/.
 
 #### Custom built Google search engine using external API
 
