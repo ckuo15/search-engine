@@ -4,15 +4,9 @@
  * is imported.
 **/
 
-// ===============================
-// ===============================
-// ===============================
-// === VISUAL
-// ===============================
 
 // === FONTS ===
 $defaultFont: "Arial";
-$primaryFont: "Oswald";
 
 // === COLORS ===
 $prim: #e14f3d;
@@ -30,16 +24,10 @@ $darkBorder: #151517;
 
 // === BACKGROUNDS ===
 $lightBlack: #080809;
-$frameBackground: #111;
 $darkBackground: #101012;
 $lightBackground: #1c1c1f;
 $off: #333;
-$offLight: #555;
 
-// === LESSON TYPES ===
-$technique: #ff9500;
-$interview: #fc0;
-$repertoire: #ff3b30;
 
 // === BORDER RADIUS ===
 $buttonRadius: 4px;
@@ -50,27 +38,3 @@ $curvedRadius: 50%;
 $boxShadow: rgba(0, 0, 0, 0.12) 0 4px 16px 0;
 $boxShadow__light: rgba(0, 0, 0, 0.24) 0 8px 16px 0;
 $boxShadow__dark: rgba(0, 0, 0, 0.06) 0 8px 8px 0;
-
-// ===============================
-// ===============================
-// ===============================
-// === LAYOUT
-// ===============================
-
-// Navbar
-$navBarHeight: 50px;
-
-// Banner Bar
-$bannerBarHeight: 42px;
-
-// Tabbar
-$tabBarHeight: 60px;
-$tabBarIconSize: 18px;
-
-// Sidebar
-$contractedSidebarWidth: 66px;
-$expandedSidebarWidth: 180px;
-
-// Rightbar
-$tabletRightbarWidth: 180px;
-$desktopRightbarWidth: 210px;
