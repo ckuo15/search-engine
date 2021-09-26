@@ -21,16 +21,16 @@ class Results extends React.Component{
   //Call the load results method
   componentDidMount(){
     this.loadResults();
+    console.log('api key:', process.env.API_KEY)
   }
 
   // this function uses an API to obtain search results from Google and we set the data to state.
   loadResults = async () => {
     var query = window.location.search.split("=")[1]; //searches for the query from the url
-    var API_KEY = "32f5c8bec37352fc6f4fdce375fbdf53" //Normally the key will be git ignored
-    var url = "http://api.serpstack.com/search?access_key=" + API_KEY + "&type=web&query=" + query
+    var url = 'https://api.scaleserp.com/search?api_key=' + process.env.API_KEY + '&q=' + query
 
     const response = await axios.get(url);
-
+    console.log('data:', response.data)
     this.setState({ 
       searchResults: response.data.organic_results, 
       data: response.data, 
@@ -85,8 +85,10 @@ class Results extends React.Component{
     const withResults = (
       <div className="results">
         <style jsx>{ResultsStyle}</style>
-        <p className="result-about">About {data.search_information.total_results} results ({data.request.total_time_taken} seconds)</p>
+        <p className="result-about">About {data.search_information.total_results} results ({data.search_information.time_taken_displayed} seconds)</p>
         
+       
+
         {data.inline_videos && 
           <React.Fragment>
             <p className="results-videos-header">Videos</p>
@@ -94,9 +96,9 @@ class Results extends React.Component{
             {data.inline_videos.map((video,i) => {
               return(
                 <div className="results-video" key={"v-"+i}>
-                  <ReactPlayer url={video.url} width="220px" height="120px" style={{ borderTopLeftRadius: 8, borderTopRightRadius: 8, overflow: "hidden"}}/>
+                  <ReactPlayer url={video.link} width="220px" height="120px" style={{ borderTopLeftRadius: 8, borderTopRightRadius: 8, overflow: "hidden"}}/>
                   <div className="video-info">
-                    <a href={video.url}>
+                    <a href={video.link}>
                       <p className="result-video-title">{video.title}</p>
                     </a>
                     <div className="result-video-details">
@@ -111,7 +113,25 @@ class Results extends React.Component{
           </React.Fragment>
         }
 
-        {searchResults.map((result,i) => {
+        {/* {data.top_stories && 
+        
+          <React.Fragment>
+            <p className="results-videos-header">Top Stories</p>
+            <div className="results-video-container">
+              {data.top_stories.map((story,i) => {
+                return(
+                  <div className="results-story" key={"v-"+i}>
+                    <h2>{story.title}</h2>
+                  </div>
+                )
+              })}
+            </div>
+
+          </React.Fragment>
+        
+        } */}
+
+        {/* {searchResults.map((result,i) => {
           return (
             <div className="result-item" key={"r-" + i}>
               <span className="result-displayed-url">{result.displayed_url.split("http://")[1]}</span>
@@ -121,9 +141,24 @@ class Results extends React.Component{
               <span className="result-snippet">{result.snippet}</span>
             </div>
           )
-        })}
+        })} */}
 
-        {data.related_searches && 
+        {/* {data.related_questions && 
+          <React.Fragment>
+            <p className="related-questions-header">Related Questions</p>
+            <div className="related-questions-container">
+              {data.related_questions.map((question,i) => {
+                return (
+                  <div className="related-questions" key={"rs-" + i}>
+                    <p>{question.question}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </React.Fragment>
+        } */}
+
+        {/* {data.related_searches && 
           <React.Fragment>
             <p className="related-searches-header">Searches related to {data.search_information.query_displayed}</p>
             <div className="related-searches-container">
@@ -138,9 +173,9 @@ class Results extends React.Component{
               })}
             </div>
           </React.Fragment>
-        }
+        } */}
 
-        <div className="results-pages">
+        {/* <div className="results-pages">
           <img src="../static/images/google-logo.png" className="results-page-company-logo"></img>
           <div className="results-page-numbers">
             {data.pagination && 
@@ -161,7 +196,7 @@ class Results extends React.Component{
             </React.Fragment>
             }
           </div>
-        </div>
+        </div> */}
       </div>
     )
     //Return contains the navbar, and the page will render based on the result from the search (with or without result).

@@ -43,6 +43,10 @@ module.exports = withTM(
     cssModules: true,
     cssLoaderOptions: {
       localIdentName: "[local]___[hash:base64:5]"
-    }
+    },
+    env: {
+      BASE_URL: process.env.BASE_URL,
+      API_KEY: process.env.API_KEY
+    },
   })
 );
