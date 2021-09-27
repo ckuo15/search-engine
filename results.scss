@@ -232,19 +232,22 @@
 .related-searches {
   display: flex;
   flex-direction: column;
-  width: 180px;
   margin-bottom: 5px;
+  background-color: #F0F3F4;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 40px;
 }
 
 .related-searches-container {
   column-count: 2;
-  width: 400px;
   margin-bottom: 20px;
 }
 
 .related-searches-items {
-  color: #190DAB;
+  color: black;
+  margin-left: 1rem;
 }
+
 //Styling for the loading page.
 
 .loading-container {
@@ -311,7 +314,6 @@
 
 .results-video {
   border: 1px solid #E0E1E5;
-  width: 300px;
   box-sizing: border-box;
   margin-right: 10px;
   border-radius: 8px;

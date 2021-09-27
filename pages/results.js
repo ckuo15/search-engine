@@ -3,6 +3,9 @@ import React from "react";
 import ResultsStyle from "../results.scss";
 import Link from "next/link";
 import ReactPlayer from "react-player";
+import { ExpandMore } from '@material-ui/icons';
+import { Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core';
+import SearchIcon from '@material-ui/icons/Search';
 
 class Results extends React.Component{
   constructor(props){
@@ -131,26 +134,37 @@ class Results extends React.Component{
         
         } */}
 
-        {/* {searchResults.map((result,i) => {
+        {searchResults.map((result,i) => {
           return (
             <div className="result-item" key={"r-" + i}>
-              <span className="result-displayed-url">{result.displayed_url.split("http://")[1]}</span>
-              <a href={result.url}>
+              <span className="result-displayed-url">{result.displayed_link}</span>
+              <a href={result.link}>
                 <span className="result-title">{result.title}</span>
               </a>
               <span className="result-snippet">{result.snippet}</span>
             </div>
           )
-        })} */}
+        })}
 
         {/* {data.related_questions && 
           <React.Fragment>
-            <p className="related-questions-header">Related Questions</p>
+            <p className="related-questions-header">People Also Ask</p>
             <div className="related-questions-container">
               {data.related_questions.map((question,i) => {
                 return (
                   <div className="related-questions" key={"rs-" + i}>
-                    <p>{question.question}</p>
+                    <Accordion>
+
+                      <AccordionSummary  expandIcon={<ExpandMore />}>
+                        {question.question}
+                      </AccordionSummary>
+
+                      <AccordionDetails>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                      sit amet blandit leo lobortis eget.
+                      </AccordionDetails>
+
+                    </Accordion>
                   </div>
                 )
               })}
@@ -158,14 +172,15 @@ class Results extends React.Component{
           </React.Fragment>
         } */}
 
-        {/* {data.related_searches && 
+        {data.related_searches && 
           <React.Fragment>
             <p className="related-searches-header">Searches related to {data.search_information.query_displayed}</p>
             <div className="related-searches-container">
               {data.related_searches.map((search,i) => {
                 return (
                       <div className="related-searches" key={"rs-" + i}>
-                        <a href={search.url}>
+                        <a href={search.link}>
+                          <SearchIcon/>
                           <span className="related-searches-items">{search.query}</span>
                         </a>
                       </div>
@@ -173,15 +188,15 @@ class Results extends React.Component{
               })}
             </div>
           </React.Fragment>
-        } */}
+        }
 
-        {/* <div className="results-pages">
+        <div className="results-pages">
           <img src="../static/images/google-logo.png" className="results-page-company-logo"></img>
           <div className="results-page-numbers">
             {data.pagination && 
             <React.Fragment>
               <p>
-                {Object.values(data.pagination.other_page_urls).map((url, i) => {
+                {Object.values(data.pagination.other_pages).map((url, i) => {
                     if (i === 0) return <span key={"p-first"} className="first-result-page">1</span>;
                     return(
                       <a href={url} key={"p-" + i}>
@@ -190,13 +205,13 @@ class Results extends React.Component{
                     )
                 })}
               </p>
-              <a href={data.pagination.next_page_url} className="results-page-next">
+              <a href={data.pagination.next} className="results-page-next">
                 <p>Next</p>
               </a>
             </React.Fragment>
             }
           </div>
-        </div> */}
+        </div>
       </div>
     )
     //Return contains the navbar, and the page will render based on the result from the search (with or without result).
@@ -211,7 +226,7 @@ class Results extends React.Component{
               <div className="results-form-container">
                 <form id="results-form" autoComplete="off">
                   <div className="results-form-input">
-                    <input type="text" id="results-search-bar" onChange={this.updateQuery}></input>
+                    <input type="text" value={this.state.search} id="results-search-bar" onChange={this.updateQuery}></input>
                     <button className="results-search-button" onClick={this.handleClick}> 
                       <i className="fas fa-search" id="results-fa-search"></i>
                     </button>

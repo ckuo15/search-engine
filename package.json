@@ -33,10 +33,13 @@
     "ext": "js json"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.11.2",
     "@yolkai/next-routes": "^3.0.0",
     "@zeit/next-typescript": "^1.1.1",
     "address": "^1.1.2",
     "axios": "^0.19.2",
+    "bootstrap": "^5.1.1",
     "dotenv": "^8.2.0",
     "eslint-plugin-react": "^7.20.0",
     "express": "^4.16.4",
@@ -48,6 +51,7 @@
     "normalize.css": "^8.0.1",
     "qrcode-terminal": "^0.12.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^2.0.0-rc.0",
     "react-dom": "^16.13.1",
     "react-easy-state": "^6.1.3",
     "react-player": "^2.1.0",
