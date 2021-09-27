@@ -38,7 +38,7 @@
     "@yolkai/next-routes": "^3.0.0",
     "@zeit/next-typescript": "^1.1.1",
     "address": "^1.1.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.2",
     "bootstrap": "^5.1.1",
     "dotenv": "^8.2.0",
     "eslint-plugin-react": "^7.20.0",
